@@ -1,7 +1,7 @@
 NAMESPACE = hoyt-alley-creative-space
 REGION = sfo3
 
-.PHONY = all auth namespace intall_ubuntu_deps
+.PHONY: all auth namespace intall_ubuntu_deps
 
 all: auth namespace
 
@@ -17,5 +17,5 @@ namespace:
 		doctl serverless namespaces create --label ${NAMESPACE} --region ${REGION}; \
 	fi
 
-install_ubuntu_build_deps:
+install_ubuntu_deps:
 	sudo snap install doctl

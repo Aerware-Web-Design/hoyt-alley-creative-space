@@ -1,4 +1,4 @@
-.PHONY = all include css clean
+.PHONY: all include css clean
 
 all: clean include css
 
@@ -15,5 +15,5 @@ css: include
 clean:
 	rm -rf build/*
 
-install_ubuntu_build_deps:
+install_ubuntu_deps:
 	sudo apt install sassc

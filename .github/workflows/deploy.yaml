@@ -31,10 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Go to web directory
-        run: cd web
-      - name: Install build dependencies
-        run: make install_ubuntu_build_deps
+      - name: Install dependencies
+        run: make install_ubuntu_deps
       - name: Build site
         run: make
       - name: Setup Pages
@@ -42,8 +40,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload build directory
-          path: 'build'
+          # Upload build web page
+          path: 'web/build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
