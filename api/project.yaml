@@ -1,0 +1,6 @@
+packages:
+  - name: api
+    functions:
+      - name: contact
+        environment:
+          EMAIL_PASSWORD: "${EMAIL_PASSWORD}"
