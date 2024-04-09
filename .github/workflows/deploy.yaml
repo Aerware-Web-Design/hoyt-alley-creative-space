@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: make install_ubuntu_deps
       - name: Build site
-        run: make
+        run: DO_TOKEN=${{ secrets.DO_TOKEN }} make
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
