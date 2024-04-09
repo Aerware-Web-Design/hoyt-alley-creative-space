@@ -1,0 +1,86 @@
+@import url('fonts.css');
+
+:root {
+	--black: #000;
+	--white: #fff;
+	--gray: #a0a0a0;
+	--red: #fa5c5c;
+	--light-red: #fdaeae;
+	--orange: #e97230;
+	--yellow: #ece653;
+	--green: #58c15e;
+	--light-green: #ace0af;
+	--blue: #309de9;
+	--light-blue: #99cef5;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+body {
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+	background: var(--blue);
+
+	main, footer {
+		transition: opacity 0.5s;
+		opacity: 1;
+	}
+
+	&.loading {
+		main, footer {
+			opacity: 0;
+		}
+	}
+}
+
+main {
+	background: var(--white);
+}
+
+.white {
+	color: var(--white);
+}
+
+.bg-red {
+	background: var(--red);
+}
+
+.bg-orange {
+	background: var(--orange);
+}
+
+.bg-yellow {
+	background: var(--yellow);
+}
+
+.bg-green {
+	background: var(--green);
+}
+
+.bg-blue {
+	background: var(--blue);
+}
+
+.ol-light-red {
+	border: 4px solid var(--light-red);
+}
+
+.ol-light-green {
+	border: 4px solid var(--light-green);
+}
+
+.ol-light-blue {
+	border: 4px solid var(--light-blue);
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}

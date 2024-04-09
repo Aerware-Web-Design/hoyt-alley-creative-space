@@ -1,0 +1,35 @@
+@import url("common.css");
+
+main {
+	padding-top: 96px;
+}
+
+nav {
+	background: var(--white);
+	border-bottom: 2px solid var(--gray);
+	position: fixed;
+	padding: 5px 20px;
+	display: flex;
+	justify-content: center;
+	width: calc(100vw - 40px);
+
+	.wrapper {
+		display: flex;
+		width: 100%;
+		max-width: 1200px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		height: 80px;
+	}
+
+	.grow {
+		flex-grow: 1;
+	}
+
+	.links {
+		grid-gap: 15px;
+	}
+}

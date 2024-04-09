@@ -1,0 +1,15 @@
+footer {
+	height: 175px;
+	justify-content: right;
+	align-items: end;
+	grid-gap: 30px;
+	padding: 20px;
+
+	p {
+		margin: 0;
+	}
+
+	.col {
+		grid-gap: 15px;
+	}
+}
