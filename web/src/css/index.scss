@@ -1,1 +1,60 @@
 @import url("common.css");
+
+main {
+	header {
+		display: flex;
+		justify-content: center;
+		height: 400px;
+		padding-top: 50px;
+	}
+
+	h1 {
+		color: var(--gray);
+		width: 300px;
+		text-align: center;
+		margin: 0;
+	}
+
+	h2 {
+		border-radius: 10px;
+		width: fit-content;
+		padding: 10px 20px;
+		box-shadow: 4px 4px 0 0 var(--gray);
+
+		&.left {
+			padding-left: 30px;
+			margin-left: -10px;
+		}
+	}
+
+	p {
+		padding: 0 20px;
+		color: var(--gray);
+	}
+
+	.card {
+		width: 300px;
+		border-radius: 10px;
+
+		img {
+			width: 100%;
+			border-radius: 5px 5px 0 0;
+		}
+
+	}
+
+	.cards {
+		padding: 20px;
+		grid-gap: 40px;
+		justify-content: end;
+	}
+
+	.left {
+		border-radius: 0 10px 10px 0;
+	}
+
+	.right {
+		border-radius: 10px 0 0 10px;
+		margin-left: auto;
+	}
+}
