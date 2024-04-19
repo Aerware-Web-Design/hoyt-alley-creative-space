@@ -33,7 +33,7 @@ main {
 			position: absolute;
 			z-index: -1;
 		}
-
+		
 		.triangle {
 			width: 350px;
 
@@ -41,27 +41,48 @@ main {
 				top: 150px;
 				left: -125px;
 				transform: rotate(190deg);
+				animation: rotate 500s infinite linear;
+
+				@keyframes rotate {
+					100% {
+						transform: rotate(550deg);
+					}
+				}
 			}
 
 			&:nth-child(3) {
 				top: 1150px;
 				left: -150px;
 				transform: rotate(25deg);
+				animation: rotate 270s infinite linear;
+
+				@keyframes rotate {
+					100% {
+						transform: rotate(385deg);
+					}
+				}
 			}
 		}
-
+		
 		.ellipse {
 			width: 350px;
 			right: -200px;
 			top: 300px;
 			transform: rotate(-20deg);
-		}
+			animation: rotate 150s infinite linear;
 
+			@keyframes rotate {
+				100% {
+					transform: rotate(-380deg);
+				}
+			}
+		}
+		
 		@media (min-width: 1400px) {
 			.ellipse {
 				right: calc(50vw - 900px);
 			}
-
+			
 			.triangle {
 				&:nth-child(1) {
 					left: calc(50vw - 825px);
