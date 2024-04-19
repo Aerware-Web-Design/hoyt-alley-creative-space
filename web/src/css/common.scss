@@ -22,6 +22,7 @@ body {
 	margin: 0;
 	font-family: 'Noto Sans', sans-serif;
 	background: var(--white);
+	overflow-x: hidden;
 
 	main, footer {
 		transition: opacity 0.5s;
@@ -36,7 +37,7 @@ body {
 }
 
 main {
-	background: var(--white);
+	background: transparent;
 	max-width: 1000px;
 	margin: auto;
 }

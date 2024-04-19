@@ -14,7 +14,7 @@ main {
 		text-align: center;
 		margin: 0;
 	}
-
+	
 	h2 {
 		border-radius: 10px;
 		width: fit-content;
@@ -26,6 +26,52 @@ main {
 	p {
 		padding: 0 40px;
 		color: var(--gray);
+	}
+
+	.background {
+		* {
+			position: absolute;
+			z-index: -1;
+		}
+
+		.triangle {
+			width: 350px;
+
+			&:nth-child(1) {
+				top: 150px;
+				left: -125px;
+				transform: rotate(190deg);
+			}
+
+			&:nth-child(3) {
+				top: 1150px;
+				left: -150px;
+				transform: rotate(25deg);
+			}
+		}
+
+		.ellipse {
+			width: 350px;
+			right: -200px;
+			top: 300px;
+			transform: rotate(-20deg);
+		}
+
+		@media (min-width: 1400px) {
+			.ellipse {
+				right: calc(50vw - 900px);
+			}
+
+			.triangle {
+				&:nth-child(1) {
+					left: calc(50vw - 825px);
+				}
+
+				&:nth-child(3) {
+					left: calc(50vw - 850px);
+				}
+			}
+		}
 	}
 
 	.card {
