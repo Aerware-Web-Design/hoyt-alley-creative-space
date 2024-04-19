@@ -4,7 +4,7 @@ main {
 	header {
 		display: flex;
 		justify-content: center;
-		height: 400px;
+		height: 300px;
 		padding-top: 50px;
 	}
 
@@ -20,15 +20,11 @@ main {
 		width: fit-content;
 		padding: 10px 20px;
 		box-shadow: 4px 4px 0 0 var(--gray);
-
-		&.left {
-			padding-left: 30px;
-			margin-left: -10px;
-		}
+		margin-top: 80px;
 	}
 
 	p {
-		padding: 0 20px;
+		padding: 0 40px;
 		color: var(--gray);
 	}
 
@@ -43,18 +39,34 @@ main {
 
 	}
 
-	.cards {
-		padding: 20px;
-		grid-gap: 40px;
-		justify-content: end;
+	.cards, .images {
+		padding: 40px;
+		grid-gap: 50px;
+		justify-content: center;
+	}
+
+	.images {
+		img {
+			border-radius: 10px;
+		}
+	}
+
+	.logos {
+		padding: 40px;
+		grid-gap: 100px;
+		justify-content: center;
+
+		img {
+			height: 150px;
+		}
 	}
 
 	.left {
-		border-radius: 0 10px 10px 0;
+		margin-left: -10px;
 	}
 
 	.right {
-		border-radius: 10px 0 0 10px;
 		margin-left: auto;
+		margin-right: -10px;
 	}
 }

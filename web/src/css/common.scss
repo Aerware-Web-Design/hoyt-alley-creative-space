@@ -21,7 +21,7 @@ a:hover {
 body {
 	margin: 0;
 	font-family: 'Noto Sans', sans-serif;
-	background: var(--blue);
+	background: var(--white);
 
 	main, footer {
 		transition: opacity 0.5s;
@@ -37,6 +37,8 @@ body {
 
 main {
 	background: var(--white);
+	max-width: 1000px;
+	margin: auto;
 }
 
 .white {

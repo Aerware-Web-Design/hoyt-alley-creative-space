@@ -3,11 +3,11 @@ main {
 }
 
 footer {
-	height: 175px;
+	background: var(--blue);
 	justify-content: right;
 	align-items: end;
 	grid-gap: 30px;
-	padding: 20px;
+	padding: 40px;
 
 	p {
 		margin: 0;
@@ -15,5 +15,15 @@ footer {
 
 	.col {
 		grid-gap: 15px;
+	}
+}
+
+.copyright {
+	color: var(--gray);
+	padding: 20px;
+	text-align: center;
+
+	a {
+		color: var(--grey);
 	}
 }
