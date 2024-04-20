@@ -19,6 +19,7 @@ main {
 	h2 {
 		border-radius: 10px;
 		width: fit-content;
+		max-width: calc(100% - 80px);
 		padding: 10px 20px;
 		box-shadow: 4px 4px 0 0 var(--gray);
 		margin-top: 80px;
@@ -27,6 +28,7 @@ main {
 	h3 {
 		padding: 0 40px;
 		color: var(--gray);
+		height: 75px;
 	}
 
 	p {
@@ -104,6 +106,7 @@ main {
 	.card {
 		width: 300px;
 		border-radius: 10px;
+		background: var(--white);
 
 		img {
 			width: 100%;
@@ -121,22 +124,25 @@ main {
 		opacity: 1;
 		margin-left: 0;
 		margin-right: 0;
-		transition: 0.2s;
+		transition: margin 0.2s;
 
 		&.hidden:not(.right) {
 			opacity: 0;
 			margin-left: -500px;
+			width: calc(100% + 500px);
 		}
 
 		&.hidden.right {
 			opacity: 0;
 			margin-right: -500px;
+			width: calc(100% + 500px);
 		}
 	}
 
 	.images {
 		img {
 			border-radius: 10px;
+			max-width: 100%;
 		}
 	}
 
