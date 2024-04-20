@@ -24,8 +24,13 @@ main {
 		margin-top: 80px;
 	}
 
-	p {
+	h3 {
 		padding: 0 40px;
+		color: var(--gray);
+	}
+
+	p {
+		padding: 0 20px;
 		color: var(--gray);
 	}
 
@@ -104,13 +109,29 @@ main {
 			width: 100%;
 			border-radius: 5px 5px 0 0;
 		}
-
 	}
 
 	.cards, .images {
 		padding: 40px;
 		grid-gap: 50px;
 		justify-content: center;
+	}
+
+	.switch-info {
+		opacity: 1;
+		margin-left: 0;
+		margin-right: 0;
+		transition: 0.2s;
+
+		&.hidden:not(.right) {
+			opacity: 0;
+			margin-left: -500px;
+		}
+
+		&.hidden.right {
+			opacity: 0;
+			margin-right: -500px;
+		}
 	}
 
 	.images {
