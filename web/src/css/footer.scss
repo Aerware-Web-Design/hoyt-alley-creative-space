@@ -16,6 +16,14 @@ footer {
 	.col {
 		grid-gap: 15px;
 	}
+
+	@media(max-width: 550px) {
+		justify-content: center;
+
+		p {
+			width: 150px;
+		}
+	}
 }
 
 .copyright {
