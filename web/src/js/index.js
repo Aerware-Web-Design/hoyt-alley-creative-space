@@ -25,7 +25,7 @@ const switchInfo = (target, info) => {
 			target.classList.toggle('hidden')
 			target.textContent = info[infoIdx]
 		}, 200)
-	}, 5000)
+	}, 10000)
 }
 
 $$('.switch-info').forEach((target, i) => switchInfo(target, infoGroups[i]))
