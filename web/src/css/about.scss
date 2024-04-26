@@ -1,0 +1,104 @@
+@import url("common.css");
+
+main {
+	h2 {
+		color: var(--gray);
+		text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+		margin: 0;
+		padding: 0 10px;
+
+		.huge {
+			font-size: 60px;
+		}
+
+		@media (max-width: 700px) {
+			text-align: center;
+			
+			.huge {
+				display: block;
+			}
+		}
+	}
+
+	.background {
+		* {
+			position: absolute;
+			z-index: -1;
+		}
+		
+		.triangle {
+			width: 350px;
+			top: 150px;
+			left: -125px;
+			transform: rotate(190deg);
+			animation: rotate 500s infinite linear;
+
+			@keyframes rotate {
+				100% {
+					transform: rotate(550deg);
+				}
+			}
+		}
+		
+		.ellipse {
+			width: 350px;
+			right: -200px;
+			top: 300px;
+			transform: rotate(-20deg);
+			animation: rotate 150s infinite linear;
+
+			@keyframes rotate {
+				100% {
+					transform: rotate(-380deg);
+				}
+			}
+		}
+		
+		@media (min-width: 1400px) {
+			.ellipse {
+				right: calc(50vw - 900px);
+			}
+			
+			.triangle {
+				&:nth-child(1) {
+					left: calc(50vw - 825px);
+				}
+
+				&:nth-child(3) {
+					left: calc(50vw - 850px);
+				}
+			}
+		}
+	}
+
+	.section {
+		grid-gap: 40px;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		flex-wrap: nowrap;
+
+		p {
+			padding: 10px;
+			background: var(--white);
+			color: var(--gray);
+			margin: 0;
+			border-radius: 10px;
+			max-width: 600px;
+		}
+		
+		img {
+			border-radius: 10px;
+			max-height: 200px;
+			max-width: 100%;
+		}
+
+		@media (max-width: 700px) {
+			flex-wrap: wrap;
+
+			&:nth-child(3) {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+}
