@@ -34,4 +34,10 @@ footer {
 	a {
 		color: var(--grey);
 	}
+
+	@media(max-width: 550px) {
+		p {
+			font-size: 16px;
+		}
+	}
 }
