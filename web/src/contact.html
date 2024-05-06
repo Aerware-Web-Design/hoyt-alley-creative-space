@@ -5,21 +5,48 @@
 		<title>Hoyt Space - Contact</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="css/contact.css">
 	</head>
 	<body>
 		<!--include nav.html-->
 		<main>
+			<div class="background">
+				<img class="triangle" src="img/red-triangle.svg">
+				<img class="ellipse" src="img/blue-ellipse.svg">
+			</div>
+
+			<h1>
+				<div class="top">WANT TO </div>
+				<div class="bottom">
+					<span class="red">T</span><span class="yellow">E</span><span class="green">A</span><span class="blue">M</span> UP?
+				</div>
+			</h1>
+
 			<form action="javascript:void(0)">
-				<input id="first-name" type="text" placeholder="First Name">
-				<input id="last-name" type="text" placeholder="Last Name">
-				<input id="email" type="email" placeholder="Email Address">
-				<input id="subject" type="text" placeholder="Subject">
-				<textarea id="message" placeholder="Your Message"></textarea>
-				<button id="send-message">Send Message</button>
+				<div class="field small">
+					<label>Full Name</label>
+					<input id="full-name" type="text">
+				</div>
+				<div class="field small">
+					<label>Company Name</label>
+					<input id="company-name" type="text">
+				</div>
+				<div class="field">
+					<label>Email Address</label>
+					<input id="email" type="email">
+				</div>
+				<div class="field">
+					<label>Message</label>
+					<textarea id="message"></textarea>
+				</div>
+
+				<div class="buttons col">
+					<button id="send-message">SEND MESSAGE</button>
+					<a target="_blank" href="lease-agreement.pdf">View lease agreement</a>
+				</div>
 			</form>
 
 			<script type="module" src="js/contact.js"></script>
-			<link type="text/css" rel="stylesheet" href="css/contact.css">
 		</main>
 		<!--include footer.html-->
 	</body>

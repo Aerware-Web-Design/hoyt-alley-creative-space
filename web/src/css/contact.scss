@@ -1,0 +1,167 @@
+@import url("common.css");
+
+main {
+	padding: 20px;
+
+	h1 {
+		color: var(--gray);
+		font-weight: 600;
+		width: 300px;
+		text-align: center;
+		text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+		margin: 60px auto;
+		line-height: 0.9em;
+
+		.top {
+			font-size: 0.8em;
+			text-align: left;
+		}
+
+		.bottom {
+			text-align: right;
+		}
+		
+		@media (max-width: 550px) {
+			.top, .bottom {
+				text-align: center;
+				line-height: 1em;
+			}
+		}
+
+		@media (min-width: 550px) {
+			font-size: 45px;
+			width: 390px;
+		}
+	}
+	
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: 40px;
+		row-gap: 20px;
+		background: var(--white);
+		border-radius: 5px;
+		padding: 10px;
+		margin: auto;
+		max-width: 500px;
+
+		button {
+			padding: 10px 20px;
+			font-weight: bold;
+			background: var(--blue);
+			color: white;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 3px 3px var(--gray);
+			transition: 0.2s;
+			
+			&:hover {
+				margin: -1px 1px 1px -1px;
+				box-shadow: 5px 5px var(--gray);
+				cursor: pointer;
+			}
+			
+			&:active {
+				margin: unset;
+				box-shadow: 3px 3px var(--gray);
+				transition: 0.05s;
+			}
+		}
+
+		a {
+			color: var(--blue);
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.field {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			label {
+				color: gray;
+				font-weight: bold;
+			}
+			
+			input {
+				border: 1px solid var(--light-gray);
+				border-radius: 5px;
+				padding: 8px;
+			}
+			
+			textarea {
+				border: 1px solid var(--light-gray);
+				border-radius: 5px;
+				padding: 8px;
+				height: 150px;
+				resize: none;
+			}
+
+			@media (min-width: 500px) {
+				&.small {
+					width: calc(50% - 20px);
+				}
+			}
+		}
+		
+		.buttons {
+			padding: 40px;
+			grid-gap: 20px;
+		}
+	}
+	
+	.background {
+		* {
+			position: absolute;
+			z-index: -1;
+		}
+		
+		.triangle {
+			width: 350px;
+			top: 150px;
+			left: -125px;
+			transform: rotate(190deg);
+			animation: rotate 500s infinite linear;
+
+			@keyframes rotate {
+				100% {
+					transform: rotate(550deg);
+				}
+			}
+		}
+		
+		.ellipse {
+			width: 350px;
+			right: -200px;
+			top: 300px;
+			transform: rotate(-20deg);
+			animation: rotate 150s infinite linear;
+
+			@keyframes rotate {
+				100% {
+					transform: rotate(-380deg);
+				}
+			}
+		}
+		
+		@media (min-width: 1400px) {
+			.ellipse {
+				right: calc(50vw - 900px);
+			}
+			
+			.triangle {
+				&:nth-child(1) {
+					left: calc(50vw - 825px);
+				}
+
+				&:nth-child(3) {
+					left: calc(50vw - 850px);
+				}
+			}
+		}
+	}
+}
