@@ -6,6 +6,7 @@ export const createRoutes = () => {
 	const parser = new DOMParser()
 
 	$$('a').forEach( async a => {
+		if (a.classList.contains('ignore')) return
 		if (!a.href) return
 		if (!a.href.includes(`${location.protocol}//${location.hostname}`)) return
 
