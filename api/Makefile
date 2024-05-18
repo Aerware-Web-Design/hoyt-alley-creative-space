@@ -8,7 +8,6 @@ endpoints: email
 
 auth:
 	doctl auth init -t $$DO_TOKEN
-	doctl serverless connect
 
 connect:
 	doctl serverless connect ${NAMESPACE}
