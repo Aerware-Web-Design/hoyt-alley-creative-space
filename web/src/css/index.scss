@@ -151,13 +151,15 @@ main {
 	.images {
 		img {
 			border-radius: 10px;
+			max-height: 300px;
 			max-width: 100%;
 		}
 	}
 
 	.logos {
 		padding: 40px;
-		grid-gap: 100px;
+		column-gap: 100px;
+		row-gap: 20px;
 		justify-content: center;
 
 		img {
