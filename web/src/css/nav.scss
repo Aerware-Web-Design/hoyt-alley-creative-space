@@ -12,6 +12,7 @@ nav {
 	display: flex;
 	justify-content: center;
 	width: calc(100vw - 40px);
+	z-index: 1;
 
 	a {
 		cursor: pointer;
