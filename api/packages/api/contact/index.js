@@ -10,6 +10,7 @@ export const main = async ({ subject, text }) => {
 	})
 
 	const mailOptions = {
+		from: 'contact.hoytalley@gmail.com',
 		to: 'madison@aerware.com',
 		subject,
 		text,
