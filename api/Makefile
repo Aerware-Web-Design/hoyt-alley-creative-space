@@ -2,7 +2,7 @@ NAMESPACE = hoyt-alley-creative-space
 
 .PHONY: all auth connect deploy intall_ubuntu_deps
 
-all: auth connect setup_env deploy
+all: auth connect deploy
 
 endpoints: email
 
@@ -15,8 +15,8 @@ connect:
 setup_env:
 	echo EMAIL_PASSWORD=$$EMAIL_PASSWORD > .env
 
-deploy:
-	doctl serverless deploy . --remote-build
+deploy: setup_env
+	doctl serverless deploy .
 
 install_ubuntu_deps:
 	sudo snap install doctl
