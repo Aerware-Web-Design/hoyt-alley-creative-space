@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer')
+import nodemailer from 'nodemailer'
 
 export const main = async ({ subject, text }) => {
 	const transporter = nodemailer.createTransport({

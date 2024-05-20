@@ -1,6 +1,7 @@
 {
   "name": "contact",
   "version": "1.0.0",
+  "type": "module",
   "description": "contact the business via email",
   "main": "index.js",
   "scripts": {
