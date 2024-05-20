@@ -12,20 +12,24 @@ ${message}
 
 // go to the stripe checkout page when the checkout button is pressed
 $('#send-message').onclick = () => {
-    const subject = "From Hoyt Contact Form"
-    const text = emailTemplate(
-        $('#full-name').value,
-        $('#company-name').value,
-        $('#email').value,
-        $('#message').value
-    )
+	const subject = "Hoyt Contact Form"
+	const text = emailTemplate(
+		$('#full-name').value,
+		$('#company-name').value,
+		$('#email').value,
+		$('#message').value
+	)
 
 	$('#send-message').style['pointer-events'] = 'none'
 
-    contact(subject, text)
+	contact(subject, text)
 	.then(res => {
 		alert('Message sent successfully!')
-		location = '/'
+
+		$('#full-name').value = ''
+		$('#company-name').value = ''
+		$('#email').value = ''
+		$('#message').value = ''
 	})
 	.catch(err => {
 		alert('Oops! Something went wrong...')
