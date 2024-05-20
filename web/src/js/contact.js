@@ -1,10 +1,9 @@
 import './modules/common.js'
-//import './modules/load-service-worker.js'
 import { $ } from './modules/common.js'
 import { contact } from './modules/api.js'
 
-const emailTemplate = (firstName, lastName, email, message) => `
-From: ${firstName} ${lastName}
+const emailTemplate = (fullName, companyName, email, message) => `
+From: ${fullName} - ${companyName}
 Email: ${email}
 
 Message:
@@ -13,10 +12,10 @@ ${message}
 
 // go to the stripe checkout page when the checkout button is pressed
 $('#send-message').onclick = () => {
-    const subject = $('#subject').textContent
+    const subject = "From Hoyt Contact Form"
     const text = emailTemplate(
-        $('#first-name').value,
-        $('#last-name').value,
+        $('#full-name').value,
+        $('#company-name').value,
         $('#email').value,
         $('#message').value
     )
