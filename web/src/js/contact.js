@@ -12,7 +12,7 @@ ${message}
 
 // go to the stripe checkout page when the checkout button is pressed
 $('#send-message').onclick = () => {
-	const subject = "Hoyt Contact Form"
+	const subject = `Hoyt Contact Form - ${$('#full-name').value}`
 	const text = emailTemplate(
 		$('#full-name').value,
 		$('#company-name').value,
