@@ -11,19 +11,20 @@ export const main = async ({ subject, text }) => {
 
 	const mailOptions = {
 		from: 'contact.hoytalley@gmail.com',
-		to: 'skycarv@gmail.com',
+		to: 'madison@aerware.com',
+		//to: 'skycarv@gmail.com',
 		subject,
 		text,
 	}
 
-  try {
-	  await transporter.sendMail(mailOptions)
-  } catch (e) {
+	try {
+		await transporter.sendMail(mailOptions)
+	} catch (e) {
 		console.error(e)
 
 		return {
-      body: 'The email could not be sent',
-      statusCode: 500,
-    }
-  }
+			body: 'The email could not be sent',
+			statusCode: 500,
+		}
+	}
 }
