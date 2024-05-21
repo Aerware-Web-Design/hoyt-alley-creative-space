@@ -30,6 +30,7 @@ $('#send-message').onclick = () => {
 		$('#company-name').value = ''
 		$('#email').value = ''
 		$('#message').value = ''
+		$('#send-message').style['pointer-events'] = 'unset'
 	})
 	.catch(err => {
 		alert('Oops! Something went wrong...')
