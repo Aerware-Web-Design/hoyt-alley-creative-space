@@ -22,6 +22,9 @@ $('#send-message').onclick = () => {
 
 	$('#send-message').style['pointer-events'] = 'none'
 
+	console.log('sending message')
+	console.log({ subject, text })
+
 	contact(subject, text)
 	.then(res => {
 		alert('Message sent successfully!')

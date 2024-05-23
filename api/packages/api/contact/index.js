@@ -16,6 +16,8 @@ export const main = async ({ subject, text }) => {
 		text,
 	}
 
+	console.log({ subject, text })
+
 	try {
 		await transporter.sendMail(mailOptions)
 	} catch (e) {
