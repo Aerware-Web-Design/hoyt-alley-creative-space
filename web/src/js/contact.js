@@ -20,7 +20,7 @@ $('#send-message').onclick = () => {
 		$('#message').value
 	)
 
-	$('#send-message').style['pointer-events'] = 'none'
+	$('#send-message').classList.add('loading');
 
 	console.log('sending message')
 	console.log({ subject, text })
@@ -33,10 +33,10 @@ $('#send-message').onclick = () => {
 		$('#company-name').value = ''
 		$('#email').value = ''
 		$('#message').value = ''
-		$('#send-message').style['pointer-events'] = 'unset'
+		$('#send-message').classList.remove('loading');
 	})
 	.catch(err => {
 		alert('Oops! Something went wrong...')
-		$('#send-message').style['pointer-events'] = 'unset'
+		$('#send-message').classList.remove('loading');
 	})
 }

@@ -47,6 +47,10 @@ main {
 		max-width: 500px;
 
 		button {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			grid-gap: 10px;
 			padding: 10px 20px;
 			font-weight: bold;
 			background: var(--blue);
@@ -66,6 +70,20 @@ main {
 				margin: unset;
 				box-shadow: 3px 3px var(--gray);
 				transition: 0.05s;
+			}
+
+			&.loading {
+				pointer-events: none;
+				padding: 7px 14px;
+				color: rgba(255, 255, 255, 0.7);
+
+				.spinner {
+					display: unset;
+				}
+			}
+
+			.spinner {
+				display: none;
 			}
 		}
 
@@ -161,6 +179,20 @@ main {
 				&:nth-child(3) {
 					left: calc(50vw - 850px);
 				}
+			}
+		}
+	}
+
+	.spinner {
+		animation: spin 3s infinite linear;
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
 			}
 		}
 	}
