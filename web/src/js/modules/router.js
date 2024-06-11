@@ -31,6 +31,9 @@ export const createRoutes = () => {
 	return routes
 }
 
+export const loadScripts = () =>
+	$$('script').forEach(script => script.type == 'module' && import(script.src))
+
 export const go = href => {
 	const link = document.createElement('a')
 
@@ -42,6 +45,7 @@ export const go = href => {
 		$('head').innerHTML = routes[href].querySelector('head').innerHTML
 		$('main').innerHTML = routes[href].querySelector('main').innerHTML
 
+		loadScripts()
 		createRoutes()
 	}, 500)
 
