@@ -9,9 +9,39 @@ Email: ${email}
 Message:
 ${message}
 `
+const fields = [
+	$('#full-name'),
+	$('#company-name'),
+	$('#email'),
+	$('#message'),
+]
+
+// make sure no information is missing
+const validate = () => {
+
+	console.log(fields)
+
+	fields.forEach(f => f.value
+		? f.classList.remove('missing')
+		: f.classList.add('missing')
+	)
+
+	if(
+		fields.reduce((acc, f) => f.value && acc, true)
+	) return
+
+	const errorMessage = 'Please fill out missing information.'
+
+	alert(errorMessage)
+
+	throw errorMessage
+}
 
 // go to the stripe checkout page when the checkout button is pressed
 $('#send-message').onclick = () => {
+
+	validate()
+
 	const subject = `Hoyt Contact Form - ${$('#full-name').value}`
 	const text = emailTemplate(
 		$('#full-name').value,
