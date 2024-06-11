@@ -19,8 +19,6 @@ const fields = [
 // make sure no information is missing
 const validate = () => {
 
-	console.log(fields)
-
 	fields.forEach(f => f.value
 		? f.classList.remove('missing')
 		: f.classList.add('missing')
